@@ -1,26 +1,52 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <img src="./assets/logo.png" alt="Vue logo" />
+    <PBHeader />
+    <PBMain />
+    <PBPopup />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import PBHeader from "./components/PBHeader.vue";
+import PBMain from "./components/PBMain.vue";
+import PBPopup from "./components/PBPopup.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { PBHeader, PBMain, PBPopup },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import "./assets/style.css";
+body {
+  margin: auto;
+  width: 90%;
+  max-width: 960px;
+  height: 100vh;
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  margin-top: 2rem;
+}
+
+.popup {
+  opacity: 0.3;
+  z-index: -1;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: var(--button-color);
+  border: 0.1rem solid var(--text-color);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 </style>

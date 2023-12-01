@@ -1,0 +1,39 @@
+:root {
+  --main-color: #2c3a47;
+  --deep-color: #636e72;
+  --accent-color: #ffeaa7;
+  --text-color: #cad3c8;
+  --list-color: #1b9cfc;
+  --button-color: #fc427b;
+}
+html {
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hide {
+  display: none !important;
+}
